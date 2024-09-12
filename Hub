@@ -1,0 +1,40 @@
+local screenGui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleLabel = Instance.new("TextLabel")
+local clickButton = Instance.new("TextButton")
+
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+screenGui.Name = "BblanHubGui"
+screenGui.ResetOnSpawn = false
+
+mainFrame.Name = "MainFrame"
+mainFrame.Parent = screenGui
+mainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainFrame.Size = UDim2.new(0, 400, 0, 300)
+mainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
+mainFrame.BorderSizePixel = 0
+
+titleLabel.Name = "bblanzzHub"
+titleLabel.Parent = mainFrame
+titleLabel.Text = "Bblan Hub"
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 30
+titleLabel.TextColor3 = Color3.fromRGB(0, 120, 212)
+titleLabel.Size = UDim2.new(1, 0, 0, 50)
+titleLabel.BackgroundTransparency = 1
+
+clickButton.Name = "ClickButton"
+clickButton.Parent = mainFrame
+clickButton.Text = "Click Me"
+clickButton.Font = Enum.Font.SourceSans
+clickButton.TextSize = 20
+clickButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+clickButton.BackgroundColor3 = Color3.fromRGB(0, 120, 212)
+clickButton.Size = UDim2.new(0, 200, 0, 50)
+clickButton.Position = UDim2.new(0.5, -100, 0.7, 0)
+clickButton.BorderSizePixel = 0
+
+clickButton.MouseButton1Click:Connect(function()
+    clickButton.Text = "Clicked!"
+end)
